@@ -561,8 +561,7 @@ namespace Open7Days {
 
 			for (auto& X : ChunkContainer) {
 				int64_t x = X.first;
-				auto iter = X.second.begin();
-				while(iter != X.second.end())
+				for(auto iter = X.second.begin(); iter != X.second.end();)
 				{
 					int64_t y = iter->first;
 					double Distance = glm::distance(Vector2f(Camera.Position.x, Camera.Position.z), Vector2f(x * CHUNKSIZE, y * CHUNKSIZE)); 
